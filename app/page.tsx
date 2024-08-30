@@ -1,5 +1,7 @@
-import React from 'react'
+import React from "react";
+
+import { MobileNavigation } from "@/src/components/MobileNavigation";
 
 export default function Page() {
-    return <h1>Hello, Next.js!</h1>
-  }
+  return <MobileNavigation />;
+}
