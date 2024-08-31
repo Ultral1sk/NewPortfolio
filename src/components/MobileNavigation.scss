@@ -1,14 +1,14 @@
-nav, .navigation-button-controller {
+@import "../../app/colors.scss";
+
+nav,
+.navigation-button-controller {
   width: 100%;
 }
 
 nav {
   height: 100%;
   container-type: inline-size; /* Enables container queries for this element */
-
-  
 }
-
 
 .navigation-menu-toggle {
   position: relative;
@@ -24,7 +24,7 @@ nav {
 .navigation-button-controller {
   position: fixed;
   z-index: 5;
-  color: white;
+  color: $primary-text-color;
 }
 
 .navigation-button {
@@ -34,16 +34,19 @@ nav {
 }
 
 .navigation-menu-bar-controller {
-  border: 0.5px solid white;
+  $border-white: $primary-text-color;
+  border: 0.5px solid $border-white;
   border-radius: 50%;
   padding: 1.6rem 1rem;
   text-align: center;
-  color: white;
-  transition: border-color 0.3s ease, color 0.3s ease; /* Optional: smooth transition */
+  color: $primary-text-color;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease; /* Optional: smooth transition */
 
-  &:hover{
-    color: red;
-    border-color: red; /* Change border color to red on hover */
+  &:hover {
+    color: $primary-hover-color;
+    border-color: $primary-hover-color; /* Change border color to red on hover */
   }
 }
 
@@ -54,22 +57,21 @@ nav {
   transition: transform 250ms ease-out;
 }
 
-.navigation-menu-bar[data-position=top] {
+.navigation-menu-bar[data-position="top"] {
   transform: translateY(-3px);
 }
 
-.navigation-menu-bar[data-position=bottom] {
+.navigation-menu-bar[data-position="bottom"] {
   transform: translateY(3px);
 }
 
-.navigation-menu-toggle.active .navigation-menu-bar[data-position=top] {
+.navigation-menu-toggle.active .navigation-menu-bar[data-position="top"] {
   transform: translateY(0) rotate(45deg) scaleX(1);
 }
 
-.navigation-menu-toggle.active .navigation-menu-bar[data-position=bottom] {
+.navigation-menu-toggle.active .navigation-menu-bar[data-position="bottom"] {
   transform: translateY(0) rotate(-45deg) scaleX(1);
 }
-
 
 /* Overlay Styles */
 .navigation-overlay {
@@ -79,7 +81,7 @@ nav {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: $background-pitch-black;
   overflow-y: hidden;
   transition: height 0.5s;
   display: flex;
@@ -95,20 +97,12 @@ nav {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: white;
+  color: $primary-text-color;
   display: block;
   transition: color 0.3s;
 }
 
 .navigation-overlay a:hover,
 .navigation-overlay a:focus {
-  color: red;
-}
-
-
-
-@media (min-width: 768px) {
-  nav {
-    display: none; /* Hide nav when viewport width is 768px or larger */
-  }
+  color: $primary-hover-color;
 }

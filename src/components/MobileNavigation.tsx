@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import "./MobileNavigation.css";
+import "./MobileNavigation.scss";
 
 export const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);

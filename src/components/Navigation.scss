@@ -1,0 +1,24 @@
+/* Hide mobile navigation by default */
+.mobile-navigation {
+  display: none;
+}
+
+/* Show mobile navigation on smaller screens */
+@media (max-width: 768px) {
+  .mobile-navigation {
+    display: block; /* Show mobile nav */
+  }
+  .desktop-navigation {
+    display: none; /* Hide desktop nav */
+  }
+}
+
+/* Show desktop navigation on larger screens */
+@media (min-width: 769px) {
+  .desktop-navigation {
+    display: block; /* Show desktop nav */
+  }
+  .mobile-navigation {
+    display: none; /* Hide mobile nav */
+  }
+}

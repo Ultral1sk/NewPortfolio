@@ -1,7 +1,7 @@
 import React from "react";
 
-import { MobileNavigation } from "@/src/components/MobileNavigation";
+import { Navigation } from "@/src/components/Navigation";
 
 export default function Page() {
-  return <MobileNavigation />;
+  return <Navigation />;
 }
