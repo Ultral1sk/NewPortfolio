@@ -15,6 +15,11 @@ body {
   background-color: $background-primary-color;
   height: 100%;
   width: 100%;
+  font-family: "Encode Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 img,
 picture,

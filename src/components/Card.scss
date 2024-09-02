@@ -1,0 +1,36 @@
+@import "../../app/colors.scss";
+
+$margin-bottom: 30px;
+
+.card {
+  border: 0.5px solid $primary-border-color;
+  padding: 2rem;
+  max-width: 767px;
+  min-width: 250px;
+  border-radius: 30px;
+  color: $primary-text-color;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .card-image {
+    display: grid;
+    place-items: center;
+
+    .card-profile-image {
+      border-radius: 30px;
+    }
+
+    .card-image-title {
+      margin: $margin-bottom;
+    }
+  }
+
+  .card-content {
+    text-align: center;
+  }
+}

@@ -10,13 +10,14 @@ import resumeIcon from "@/public/assets/icons/resume.png";
 import servicesIcon from "@/public/assets/icons/service.png";
 import projectsIcon from "@/public/assets/icons/projects.png";
 import contactIcon from "@/public/assets/icons/contact.png";
+import skills from "@/public/assets/icons/skills.png";
 
 const navigationLinks = [
   { name: "Home", link: "1", iconSrc: homeIcon },
   { name: "About", link: "2", iconSrc: aboutIcon },
   { name: "Resume", link: "3", iconSrc: resumeIcon },
+  { name: "Skills", link: "", iconSrc: skills },
   { name: "Services", link: "4", iconSrc: servicesIcon },
-  //   { name: "Skills", link: "", icon:  },
   { name: "Projects", link: "5", iconSrc: projectsIcon },
   { name: "Contact", link: "6", iconSrc: contactIcon },
 ];
@@ -26,7 +27,7 @@ export const OtherNavigation = () => {
     <nav className="other-navigation">
       {navigationLinks.map((item) => {
         return (
-          <Link href={item.link} className="navigation-icon">
+          <Link key={item.link} href={item.link} className="navigation-icon">
             <Image width={18} src={item.iconSrc} alt={item.name} />
             <span className="navigation-icon-name">{item.name}</span>
           </Link>

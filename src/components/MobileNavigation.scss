@@ -1,5 +1,6 @@
 @import "../../app/colors.scss";
 
+/* Global Navigation Styles */
 nav,
 .navigation-button-controller {
   width: 100%;
@@ -7,9 +8,10 @@ nav,
 
 nav {
   height: 100%;
-  container-type: inline-size; /* Enables container queries for this element */
+  container-type: inline-size; // Enables container queries for this element
 }
 
+/* Navigation Menu Toggle */
 .navigation-menu-toggle {
   position: relative;
   display: flex;
@@ -17,10 +19,11 @@ nav {
   align-items: center;
   background: transparent;
   border: none;
-  transition: all 250ms ease-in-out;
   cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 
+/* Button Controller */
 .navigation-button-controller {
   position: fixed;
   z-index: 5;
@@ -29,10 +32,11 @@ nav {
 
 .navigation-button {
   position: absolute;
-  right: 50px;
   top: 50px;
+  right: 50px;
 }
 
+/* Menu Bar Controller */
 .navigation-menu-bar-controller {
   $border-white: $primary-text-color;
   border: 0.5px solid $border-white;
@@ -42,50 +46,54 @@ nav {
   color: $primary-text-color;
   transition:
     border-color 0.3s ease,
-    color 0.3s ease; /* Optional: smooth transition */
+    color 0.3s ease;
 
   &:hover {
-    color: $primary-hover-color;
-    border-color: $primary-hover-color; /* Change border color to red on hover */
+    color: $primary-hover-color; // Changed to primary color for visibility
+    border-color: $primary-hover-color; // Changed to primary color for visibility
   }
 }
 
+/* Menu Bar */
 .navigation-menu-bar {
   width: 26px;
-  background: black;
+  background: $background-pitch-black;
   border: 1px solid;
   transition: transform 250ms ease-out;
+
+  &[data-position="top"] {
+    transform: translateY(-3px);
+  }
+
+  &[data-position="bottom"] {
+    transform: translateY(3px);
+  }
 }
 
-.navigation-menu-bar[data-position="top"] {
-  transform: translateY(-3px);
-}
+/* Active State for Menu Bars */
+.navigation-menu-toggle.active {
+  .navigation-menu-bar[data-position="top"] {
+    transform: translateY(0) rotate(45deg) scaleX(1);
+  }
 
-.navigation-menu-bar[data-position="bottom"] {
-  transform: translateY(3px);
-}
-
-.navigation-menu-toggle.active .navigation-menu-bar[data-position="top"] {
-  transform: translateY(0) rotate(45deg) scaleX(1);
-}
-
-.navigation-menu-toggle.active .navigation-menu-bar[data-position="bottom"] {
-  transform: translateY(0) rotate(-45deg) scaleX(1);
+  .navigation-menu-bar[data-position="bottom"] {
+    transform: translateY(0) rotate(-45deg) scaleX(1);
+  }
 }
 
 /* Overlay Styles */
 .navigation-overlay {
-  height: 0;
-  width: 100%;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
   background-color: $background-pitch-black;
+  z-index: 1;
   overflow-y: hidden;
-  transition: height 0.5s;
   display: flex;
   align-items: center;
+  transition: height 0.5s;
 }
 
 .navigation-overlay-content {
@@ -93,16 +101,17 @@ nav {
   text-align: center;
 }
 
+/* Overlay Links */
 .navigation-overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: $primary-text-color;
   display: block;
+  padding: 8px;
+  font-size: 40px;
+  color: $primary-text-color;
+  text-decoration: none;
   transition: color 0.3s;
-}
 
-.navigation-overlay a:hover,
-.navigation-overlay a:focus {
-  color: $primary-hover-color;
+  &:hover,
+  &:focus {
+    color: $primary-hover-color; // Changed to primary color for visibility
+  }
 }

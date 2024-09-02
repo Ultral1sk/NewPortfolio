@@ -1,0 +1,53 @@
+@import "../../app/colors.scss";
+
+.profile-card-icon-controller {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  .profile-card-icon-border {
+    $border-white: $primary-text-color;
+    border: 0.5px solid $border-white;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 0.8rem;
+
+    transition:
+      border-color 0.3s ease,
+      filter 0.3s ease; /* Smooth transition for border and filter changes */
+
+    &:hover {
+      border-color: $primary-hover-color; /* Set the border to red on hover */
+
+      .profile-card-icon {
+        filter: invert(25%) sepia(100%) saturate(1000%) hue-rotate(-50deg)
+          brightness(1) contrast(1); /* Change to red */
+      }
+    }
+
+    .profile-card-icon {
+      justify-self: center;
+      filter: invert(100%);
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.profile-card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  margin: 0 auto;
+  padding: 0.8rem;
+  width: 40%;
+  background-color: $primary-hover-color;
+  border: 0;
+  border-radius: 30px;
+
+  :first-child {
+    margin-right: 0.3rem;
+  }
+}
