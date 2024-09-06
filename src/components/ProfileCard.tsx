@@ -28,41 +28,43 @@ const portfolioCardIcons = [
 
 export const ProfileCard = () => {
   return (
-    <Card
-      cardTitle="Jovan"
-      subTitle="Software Developer"
-      imageSrc={jovan}
-      imageTitle={
-        <span>
-          jderebanoski@gmail.com <br /> Based in Essen, Germany
-        </span>
-      }
-    >
-      <p>© 2024 Jovan. All Rights Reserved</p>
-      <div className="profile-card-icon-controller">
-        {portfolioCardIcons.map((info) => {
-          return (
-            <a
-              key={info.href}
-              className="profile-card-icon-border"
-              href={info.href}
-              target="_blank"
-            >
-              <Image
-                className="profile-card-icon"
-                src={info.iconSrc}
-                alt={info.name}
-              />
-            </a>
-          );
-        })}
-      </div>
-      <button className="profile-card-button">
-        <span>
-          <Image width={18} src={contactIcon} alt="Hire me Icon" />
-        </span>
-        <span>HIRE ME!</span>
-      </button>
-    </Card>
+    <div className="profile-card">
+      <Card
+        cardTitle="Jovan"
+        subTitle="Software Developer"
+        imageSrc={jovan}
+        imageTitle={
+          <span>
+            jderebanoski@gmail.com <br /> Based in Essen, Germany
+          </span>
+        }
+      >
+        <p>© 2024 Jovan. All Rights Reserved</p>
+        <div className="profile-card-icon-controller">
+          {portfolioCardIcons.map((info) => {
+            return (
+              <a
+                key={info.href}
+                className="profile-card-icon-border"
+                href={info.href}
+                target="_blank"
+              >
+                <Image
+                  className="profile-card-icon"
+                  src={info.iconSrc}
+                  alt={info.name}
+                />
+              </a>
+            );
+          })}
+        </div>
+        <button className="profile-card-button">
+          <span>
+            <Image width={18} src={contactIcon} alt="Hire me Icon" />
+          </span>
+          <span>CONTACT ME!</span>
+        </button>
+      </Card>
+    </div>
   );
 };

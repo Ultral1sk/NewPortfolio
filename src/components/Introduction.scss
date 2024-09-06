@@ -1,0 +1,11 @@
+@import "/app/colors.scss";
+
+.introduction {
+  width: 100%;
+  padding: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
