@@ -4,7 +4,7 @@
   border: 1px solid $primary-border-color;
   border-radius: 30px;
   position: fixed;
-  right: 68px;
+  right: 65px;
   top: 222px;
   width: 55px;
   text-align: center;
@@ -48,8 +48,7 @@
 }
 
 .navigation-icon:hover > img {
-  filter: invert(25%) sepia(100%) saturate(1000%) hue-rotate(-50deg)
-    brightness(1) contrast(1); /* Change to red */
+  filter: $color-png-red;
 }
 
 .navigation-icon:hover .navigation-icon-name {
