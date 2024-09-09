@@ -6,10 +6,8 @@ import "@/src/components/Navigation.scss";
 
 export const Navigation = () => {
   return (
-    <>
-      <nav className="desktop-navigation">
-        <OtherNavigation />
-      </nav>
-    </>
+    <nav className="desktop-navigation">
+      <OtherNavigation />
+    </nav>
   );
 };
