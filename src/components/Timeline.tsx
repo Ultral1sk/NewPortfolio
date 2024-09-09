@@ -14,7 +14,7 @@ export const Timeline = ({ year, position, company, type }: TimelineProps) => {
     <div className="timeline-controller">
       <div className="timeline-block">
         <div className="container">
-          <div className="marker"></div>
+          <div className="marker" />
         </div>
         <div className="timeline-content">
           <h5 className="timeline-year">{year}</h5>
