@@ -1,7 +1,7 @@
 @import "/app/colors.scss";
+@import "/app/fontSize.scss";
 
 .introduction-info {
-  padding: 2rem;
   .introduction-personal-info {
     h1 {
       font-size: 3.4rem;
@@ -26,10 +26,12 @@
     .introduction-image-info {
       display: grid;
       color: #999999;
+      align-self: center;
 
       .introduction-image-controller {
         position: relative;
         width: 200px;
+        height: 215px;
 
         .image-info {
           position: absolute;
@@ -40,7 +42,7 @@
         .image-arrow {
           position: absolute;
           left: 92px;
-          bottom: 5px;
+          bottom: -2px;
           animation: jump 1s ease-in-out infinite;
           filter: $color-png-red;
         }
@@ -50,7 +52,7 @@
     .introduction-info-content-text {
       margin-top: 1.5rem;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1023px) {
         display: grid;
         grid-template-columns: 250px 250px;
         grid-template-rows: 1fr;
@@ -72,11 +74,11 @@
 
         h2 {
           color: $primary-hover-color;
-          font-size: 48px;
+          font-size: $title-font-size;
         }
 
         p {
-          font-size: 14px;
+          font-size: $section-font-size;
         }
       }
     }

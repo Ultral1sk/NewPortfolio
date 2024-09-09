@@ -3,9 +3,6 @@
 .other-navigation {
   border: 1px solid $primary-border-color;
   border-radius: 30px;
-  position: fixed;
-  right: 65px;
-  top: 222px;
   width: 55px;
   text-align: center;
   gap: 20px;
@@ -18,7 +15,7 @@
   > a {
     padding: 0.5rem;
     text-align: center;
-    position: relative; /* Position relative for tooltip */
+    position: relative;
   }
 
   .navigation-icon-name {
@@ -26,19 +23,19 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    right: 45px; /* Adjust this to position tooltip correctly */
+    right: 45px;
     transform: translateY(-50%);
-    background-color: #333; /* Tooltip background */
-    color: $primary-text-color; /* Tooltip text color */
+    background-color: #333;
+    color: $primary-text-color;
     padding: 5px 8px;
     border-radius: 4px;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     transition:
       opacity 0.3s ease,
       visibility 0.3s ease;
-    z-index: 10; /* Ensure it appears above other elements */
+    z-index: 10;
     font-size: 12px;
-    pointer-events: none; /* Prevent hover from affecting tooltip */
+    pointer-events: none;
   }
 }
 

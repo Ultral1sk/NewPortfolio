@@ -4,7 +4,7 @@
 }
 
 /* Show mobile navigation on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .mobile-navigation {
     display: block; /* Show mobile nav */
   }
@@ -14,7 +14,7 @@
 }
 
 /* Show desktop navigation on larger screens */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .desktop-navigation {
     display: block; /* Show desktop nav */
   }

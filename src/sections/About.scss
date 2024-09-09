@@ -1,0 +1,13 @@
+@import "../../app/colors.scss";
+@import "../../app/fontSize.scss";
+
+.about {
+  padding: 1rem;
+
+  .about-info-title {
+    font-size: $title-font-size;
+    strong {
+      color: $primary-hover-color;
+    }
+  }
+}
