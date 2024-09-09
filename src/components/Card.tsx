@@ -21,7 +21,7 @@ export const Card = ({
   return (
     <div className="card">
       <div className="card-header">
-        <h2>{cardTitle}</h2>
+        <h3>{cardTitle}</h3>
         <h3>{subTitle}</h3>
       </div>
 

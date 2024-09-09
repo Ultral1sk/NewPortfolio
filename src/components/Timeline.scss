@@ -1,0 +1,74 @@
+@import "/app/colors.scss";
+
+.timeline-controller {
+  margin-top: 1rem;
+
+  $marker-size: 12px;
+  $timeline-line-width: 1px;
+  $transition-duration: 0.3s;
+
+  .container {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $marker-size + 4px;
+      left: $marker-size / 2 - $timeline-line-width / 2;
+      width: $timeline-line-width;
+      height: 100%;
+      background: #585858;
+      z-index: 0;
+    }
+
+    .marker {
+      width: $marker-size;
+      height: $marker-size;
+      border-radius: 50%;
+      background-color: white;
+      margin-top: 4px;
+      z-index: 1;
+      transition: background-color $transition-duration ease;
+
+      &:hover {
+        background-color: $primary-hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .timeline-block {
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    height: 150px;
+  }
+
+  .timeline-content {
+    width: 98%;
+    color: #666;
+    padding: 0 2rem 0 0;
+
+    h2 {
+      font-weight: 500;
+      color: white;
+      margin-top: 1.3rem;
+    }
+
+    span {
+      font-size: 12px;
+    }
+
+    .timeline-year,
+    .timeline-type {
+      transition: color $transition-duration ease;
+
+      &:hover {
+        color: $primary-hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

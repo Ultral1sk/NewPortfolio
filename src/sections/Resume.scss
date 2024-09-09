@@ -1,0 +1,17 @@
+@import "../../app/colors.scss";
+@import "../../app/fontSize.scss";
+
+.resume-info {
+  padding: 1rem;
+
+  .resume-info-title {
+    font-size: $title-font-size;
+    strong {
+      color: $primary-hover-color;
+    }
+  }
+
+  .resume-info-timeline:last-child .container::before {
+    height: 45%;
+  }
+}
