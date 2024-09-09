@@ -3,12 +3,9 @@
 /* Global Navigation Styles */
 nav,
 .navigation-button-controller {
-  width: 100%;
-}
-
-nav {
-  height: 100%;
-  container-type: inline-size; // Enables container queries for this element
+  position: absolute;
+  top: 17px;
+  right: 20px;
 }
 
 /* Navigation Menu Toggle */
@@ -28,12 +25,6 @@ nav {
   position: fixed;
   z-index: 5;
   color: $primary-text-color;
-}
-
-.navigation-button {
-  position: absolute;
-  top: 64px;
-  right: 16px;
 }
 
 /* Menu Bar Controller */

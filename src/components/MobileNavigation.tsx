@@ -33,8 +33,8 @@ export const MobileNavigation = () => {
           }
         >
           <div className="navigation-menu-bar-controller">
-            <div className="navigation-menu-bar" data-position="top"></div>
-            <div className="navigation-menu-bar" data-position="bottom"></div>
+            <div className="navigation-menu-bar" data-position="top" />
+            <div className="navigation-menu-bar" data-position="bottom" />
           </div>
         </button>
       </div>
