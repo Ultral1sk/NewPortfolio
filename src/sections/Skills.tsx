@@ -59,10 +59,11 @@ export const Skills = () => {
           return (
             <div className="skills-card">
               <Card
+                key={language.name}
                 cardTitle={""}
+                subTitle={""}
                 imageTitle={language.name}
                 imageSrc={language.iconSrc}
-                subTitle={""}
               >
                 <></>
               </Card>
@@ -75,10 +76,11 @@ export const Skills = () => {
           return (
             <div className="skills-card">
               <Card
+                key={framework.name}
                 cardTitle={""}
+                subTitle={""}
                 imageTitle={framework.name}
                 imageSrc={framework.iconSrc}
-                subTitle={""}
               >
                 <></>
               </Card>
@@ -91,10 +93,11 @@ export const Skills = () => {
           return (
             <div className="skills-card">
               <Card
+                key={tool.name}
                 cardTitle={""}
+                subTitle={""}
                 imageTitle={tool.name}
                 imageSrc={tool.iconSrc}
-                subTitle={""}
               >
                 <></>
               </Card>
