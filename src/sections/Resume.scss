@@ -1,5 +1,5 @@
-@import "../../app/colors.scss";
-@import "../../app/fontSize.scss";
+@import "/app/colors.scss";
+@import "/app/fontSize.scss";
 
 .resume-info {
   padding: 1rem;
@@ -11,7 +11,13 @@
     }
   }
 
-  .resume-info-timeline:last-child .container::before {
-    height: 45%;
+  .resume-info-timelines {
+    .timeline-controller {
+      &:last-child {
+        .container::before {
+          height: 53%;
+        }
+      }
+    }
   }
 }

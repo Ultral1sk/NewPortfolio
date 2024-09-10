@@ -57,4 +57,20 @@
       grid-row: 3;
     }
   }
+
+  .skills-section {
+    grid-column: 1;
+    @media (min-width: 1023px) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+  }
+
+  .projects-section {
+    grid-column: 1;
+    @media (min-width: 1023px) {
+      grid-column: 2;
+      grid-row: 5;
+    }
+  }
 }

@@ -6,6 +6,9 @@ import { About } from "@/src/sections/About";
 import { ProfileCard } from "@/src/sections/ProfileCard";
 import { Resume } from "@/src/sections/Resume";
 
+import { Skills } from "@/src/sections/Skills";
+import { Projects } from "@/src/sections/Projects";
+
 import "@/app/page.scss";
 
 export default function Page() {
@@ -25,6 +28,12 @@ export default function Page() {
       </div>
       <div className="resume-section">
         <Resume />
+      </div>
+      <div className="skills-section">
+        <Skills />
+      </div>
+      <div className="projects-section">
+        <Projects />
       </div>
     </div>
   );
