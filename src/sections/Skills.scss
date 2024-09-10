@@ -1,0 +1,57 @@
+@import "/app/colors.scss";
+@import "/app/fontSize.scss";
+
+.skills-info-title {
+  font-size: $title-font-size;
+
+  span {
+    color: $primary-hover-color;
+  }
+}
+
+%flex-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+%skills-card {
+  width: 120px;
+  margin: 0.8rem;
+
+  > div {
+    border-radius: 135px;
+    min-width: 120px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border-color: $primary-hover-color;
+    }
+  }
+
+  .card-image {
+    > img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .card-image-title {
+    margin: 0.5px;
+    font-size: 10px;
+  }
+}
+
+.programming-languages,
+.frameworks,
+.tools {
+  @extend %flex-container;
+
+  .skills-card {
+    @extend %skills-card;
+  }
+}

@@ -9,7 +9,7 @@ interface ChipProps {
 
 export const Chip = ({ title, icon }: ChipProps) => {
   return (
-    <div className="chip-controller">
+    <div className="chip-controller" id={title}>
       <div className="chip-content">
         <span className="chip-icon">{icon}</span>
         <span className="chip-text">{title}</span>
