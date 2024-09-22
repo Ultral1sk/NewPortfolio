@@ -1,18 +1,69 @@
 @import "../../app/colors.scss";
 
-.profile-card {
-  .profile-card-icon-controller {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
+$secondary-color: #303030;
+$border-white: $primary-text-color;
+$card-height: 99vh;
+$card-margin-top: 0.3rem;
 
-    .profile-card-icon-border {
-      $border-white: $primary-text-color;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-layout {
+  height: $card-height;
+  position: relative;
+  overflow: hidden;
+  margin-top: $card-margin-top;
+}
+
+@mixin icon-style {
+  justify-self: center;
+  filter: invert(100%);
+  width: 22px;
+  height: 22px;
+}
+
+@mixin button-style {
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background-color: $primary-hover-color;
+  text-decoration: none;
+  padding: 0.8rem;
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+
+  &:hover {
+    background-color: $secondary-color;
+    border: 0.5px solid $primary-hover-color;
+  }
+}
+
+.profile-card {
+  @media (min-width: 1024px) {
+    @include card-layout;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    height: 100%;
+  }
+
+  &-icon {
+    &-controller {
+      @include flex-center;
+      margin: 1rem;
+    }
+
+    &-border {
       border: 0.5px solid $border-white;
       border-radius: 50%;
       padding: 1rem;
       margin: 0.8rem;
-
       transition:
         border-color 0.3s ease,
         filter 0.3s ease;
@@ -24,31 +75,72 @@
           filter: $color-png-red;
         }
       }
-
-      .profile-card-icon {
-        justify-self: center;
-        filter: invert(100%);
-        width: 22px;
-        height: 22px;
-      }
     }
+
+    &-button {
+      filter: invert(100%);
+    }
+
+    @include icon-style;
   }
 
-  .profile-card-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
+  &-button {
+    @include flex-center;
+    @include button-style;
+    align-self: flex-end;
     margin: 0 auto;
-    padding: 0.8rem;
-    width: 100%;
-    background-color: $primary-hover-color;
-    border: 0;
-    border-radius: 30px;
 
     :first-child {
       margin-right: 0.3rem;
     }
+  }
+}
+
+.open-border {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    height: 0.5px;
+    transition: opacity 0.3s ease;
+  }
+
+  @media (min-width: 1024px) {
+    @include card-layout;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 0.5px;
+      background-color: $primary-border-color;
+      top: 320px;
+      height: 235px;
+      background-color: black;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .profile-card-content {
+    @extend .profile-card-content;
+  }
+
+  .profile-card-icon-controller {
+    @extend .profile-card-icon-controller;
+  }
+
+  .profile-card-icon-border {
+    @extend .profile-card-icon-border;
+  }
+
+  .profile-card-icon {
+    @extend .profile-card-icon;
+  }
+
+  .profile-card-button {
+    @extend .profile-card-button;
   }
 }

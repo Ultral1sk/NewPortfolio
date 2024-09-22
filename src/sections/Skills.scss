@@ -1,57 +1,64 @@
 @import "/app/colors.scss";
 @import "/app/fontSize.scss";
 
-.skills-info-title {
-  font-size: $title-font-size;
+.skills {
+  .skills-info-title {
+    font-size: $title-font-size;
+    margin: 1rem 0;
 
-  span {
-    color: $primary-hover-color;
+    span {
+      color: $primary-hover-color;
+    }
   }
-}
 
-%flex-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-%skills-card {
-  width: 120px;
-  margin: 0.8rem;
-
-  > div {
-    border-radius: 135px;
-    min-width: 120px;
-    height: 150px;
+  %flex-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+  }
 
-    &:hover {
-      border-color: $primary-hover-color;
+  %skills-card {
+    width: 150px;
+    margin: 0.5rem;
+
+    > div {
+      border-radius: 135px;
+      min-width: 120px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        border-color: $primary-hover-color;
+      }
+    }
+
+    .card-image {
+      > img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    .card-profile-image {
+      margin-top: 1rem;
+    }
+    .card-image-title {
+      margin: 1rem 0;
+      font-size: 10px;
+      font-weight: 500;
     }
   }
 
-  .card-image {
-    > img {
-      height: 60px;
-      width: 60px;
+  .programming-languages,
+  .frameworks,
+  .tools {
+    @extend %flex-container;
+
+    .skills-card {
+      @extend %skills-card;
     }
-  }
-
-  .card-image-title {
-    margin: 0.5px;
-    font-size: 10px;
-  }
-}
-
-.programming-languages,
-.frameworks,
-.tools {
-  @extend %flex-container;
-
-  .skills-card {
-    @extend %skills-card;
   }
 }

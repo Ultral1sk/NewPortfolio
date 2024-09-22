@@ -1,6 +1,76 @@
 @import "/app/colors.scss";
+@import "/app/fontSize.scss";
+
+.zoom-in-out {
+  animation: zoomInOut 15s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0%,
+  33.33%,
+  100% {
+    transform: scale(1);
+  }
+  66.66% {
+    transform: scale(1.3);
+  }
+}
 
 .introduction {
-  width: 100%;
   padding: 1rem;
+
+  .introduction-personal-info {
+    h1 {
+      font-size: 3.4rem;
+      margin: 1rem 0;
+
+      strong {
+        color: $primary-hover-color;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: #999999;
+    }
+  }
+
+  .introduction-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    align-items: center;
+    place-items: center;
+    color: #999999;
+
+    .zoom-in-out {
+      animation: zoomInOut 10s ease-in-out infinite;
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: auto 1fr auto;
+    }
+
+    .introduction-detail-info {
+      display: grid;
+      grid-template-rows: auto auto;
+
+      text-align: center;
+      color: #999999;
+      margin: 1rem;
+
+      @media (min-width: 768px) {
+        margin: 0rem;
+      }
+
+      h2 {
+        color: $primary-hover-color;
+        font-size: $title-font-size;
+      }
+
+      p {
+        font-size: $section-font-size;
+      }
+    }
+  }
 }

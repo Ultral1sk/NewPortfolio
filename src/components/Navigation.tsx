@@ -4,10 +4,10 @@ import { OtherNavigation } from "./OtherNavigation";
 
 import "@/src/components/Navigation.scss";
 
-export const Navigation = () => {
+export const Navigation = ({ visibleSection }: { visibleSection: string }) => {
   return (
     <nav className="desktop-navigation">
-      <OtherNavigation />
+      <OtherNavigation visibleSection={visibleSection} />
     </nav>
   );
 };

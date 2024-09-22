@@ -1,0 +1,127 @@
+@import "/app/colors";
+@import "/app/fontSize";
+
+// Variables
+$primary-color: white;
+$secondary-color: #303030;
+$placeholder-color: #999;
+$input-width: 80%;
+$border-bottom: 1px solid $secondary-color;
+
+// Mixins
+@mixin input-reset {
+  width: $input-width;
+  background-color: transparent;
+  color: $primary-color;
+  border: none;
+  border-bottom: $border-bottom;
+}
+
+.contact-container {
+  margin-top: 1rem;
+
+  .contact-info-title {
+    font-size: $title-font-size;
+    margin: 1rem 0;
+
+    span {
+      color: $primary-hover-color;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 800;
+    color: $primary-color;
+
+    sup {
+      color: $primary-hover-color;
+    }
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  #message {
+    width: 90%;
+  }
+  input {
+    @include input-reset;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1.5rem 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  .underline {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary-hover-color;
+    transition: width 0.3s ease-in-out;
+  }
+
+  input:focus ~ .underline {
+    width: $input-width;
+  }
+
+  .select-subject {
+    @include input-reset;
+    margin-top: 2rem;
+    padding: 0.4rem 0;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  .contact-form {
+    display: grid;
+    grid-row-gap: 3rem;
+
+    .input-message {
+      grid-column: 1 / span 2;
+      input:focus ~ .underline {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 1023px) {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1rem;
+    }
+
+    .form-submit-button {
+      grid-column: 1 / span 2;
+      margin-bottom: 2.5rem;
+      width: 90%;
+      padding: 0.7rem;
+      border-radius: 30px;
+      font-weight: 500;
+      color: white;
+      background-color: $primary-hover-color;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary-color;
+        border: 0.5px solid $primary-hover-color;
+      }
+    }
+  }
+}
