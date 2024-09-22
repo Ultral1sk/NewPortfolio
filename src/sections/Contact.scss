@@ -5,7 +5,7 @@
 $primary-color: white;
 $secondary-color: #303030;
 $placeholder-color: #999;
-$input-width: 95%;
+$input-width: 80%;
 $border-bottom: 1px solid $secondary-color;
 
 // Mixins
@@ -44,7 +44,7 @@ $border-bottom: 1px solid $secondary-color;
   }
 
   #message {
-    width: 95%;
+    width: 90%;
   }
   input {
     @include input-reset;
@@ -96,6 +96,9 @@ $border-bottom: 1px solid $secondary-color;
 
     .input-message {
       grid-column: 1 / span 2;
+      input:focus ~ .underline {
+        width: 90%;
+      }
     }
 
     @media (min-width: 1023px) {
@@ -106,7 +109,7 @@ $border-bottom: 1px solid $secondary-color;
     .form-submit-button {
       grid-column: 1 / span 2;
       margin-bottom: 2.5rem;
-      width: 95%;
+      width: 90%;
       padding: 0.7rem;
       border-radius: 30px;
       font-weight: 500;
