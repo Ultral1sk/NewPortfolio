@@ -1,5 +1,4 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 
 import "@/src/components/Card.scss";
 
@@ -7,7 +6,7 @@ interface CardProps {
   cardTitle: string;
   imageTitle: React.ReactNode;
   subTitle: string;
-  imageSrc: StaticImageData;
+  image: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -16,7 +15,7 @@ export const Card = ({
   imageTitle,
   subTitle,
   children,
-  imageSrc,
+  image,
 }: CardProps) => {
   return (
     <div className="card">
@@ -26,12 +25,7 @@ export const Card = ({
       </div>
 
       <div className="card-image">
-        <Image
-          className="card-profile-image"
-          height={250}
-          src={imageSrc}
-          alt={cardTitle}
-        />
+        {image}
         <div className="card-image-title">{imageTitle}</div>
       </div>
       <div className="card-content">{children}</div>

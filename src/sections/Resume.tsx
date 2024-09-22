@@ -7,26 +7,7 @@ import { Timeline } from "@/src/components/Timeline";
 import resumeIcon from "@/public/assets/icons/resume.png";
 import "@/src/sections/Resume.scss";
 
-const timeline = [
-  {
-    year: "2020 - Present",
-    position: "Full-Stack Developer",
-    company: "AAP-NDT ( Advanced Automation Protocol In NDT )",
-    type: "Work",
-  },
-  {
-    year: "2019 - 2020",
-    position: "Full-Stack Developer",
-    company: "DCI ( Digital Career Institute )",
-    type: "Education",
-  },
-  {
-    year: "2012 - 2016",
-    position: "Bachelor's Degree In Education",
-    company: "University 'St. Kliment Ohridski' Macedonia / Bitola",
-    type: "Education",
-  },
-];
+import data from "src/data.json";
 
 export const Resume = () => {
   return (
@@ -37,7 +18,7 @@ export const Resume = () => {
       </h2>
 
       <div className="resume-info-timelines">
-        {timeline.map(({ year, position, company, type }) => (
+        {data.timeline.map(({ year, position, company, type }) => (
           <Timeline
             key={`${year}-${company}`}
             year={year}

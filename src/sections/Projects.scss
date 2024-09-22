@@ -1,10 +1,15 @@
 @import "../../app/fontSize.scss";
+@import "../../app/colors.scss";
 
 .projects {
   width: 98%;
 
   &-info-title {
     font-size: $title-font-size;
+    margin: 1rem 0;
+    strong {
+      color: $primary-hover-color;
+    }
   }
 
   .project-cards {
@@ -31,6 +36,11 @@
 
       > :nth-child(3) {
         grid-column: 2;
+      }
+
+      /* New rule for the rest of the children */
+      > :nth-child(n + 5) {
+        grid-column: 1 / -1;
       }
     }
   }

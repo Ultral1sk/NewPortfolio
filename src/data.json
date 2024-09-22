@@ -1,0 +1,178 @@
+{
+  "profileCardInfo":  {
+    "general": {
+      "jovan": {
+        "name": "Jovan",
+        "images": ["/assets/global/download.gif","/assets/global/turnRight.gif", "/assets/global/turnLeft.gif", "/assets/global/turnDown.gif", "/assets/global/turnUp.gif"]
+      },
+      "contact": {
+        "name": "Contact",
+        "iconSrc": "/assets/icons/contact.png",
+        "href": "#Contact"
+      }
+    },    
+    "icons": [
+      {
+        "name": "LinkedIn",
+        "iconSrc": "/assets/navigation/linkedin.png",
+        "href": "https://www.linkedin.com/in/jovan-derebanoski-7a053b153/"
+      },
+      {
+        "name": "Xing",
+        "iconSrc": "/assets/navigation/xing.png",
+        "href": "https://www.xing.com/profile/Jovan_Derebanoski/web_profiles?expandNeffi=true"
+      },
+      { "name": "Github", "iconSrc": "/assets/navigation/github.png", "href": "https://github.com/Ultral1sk" }
+    ]
+  },
+  "navigationLinks": [
+      {
+        "name": "Introduction",
+        "link": "#Introduction",
+        "iconSrc": "/assets/icons/home.png"
+      },
+      { "name": "About", "link": "#About", "iconSrc": "/assets/icons/about.png" },
+      { "name": "Resume", "link": "#Resume", "iconSrc": "/assets/icons/resume.png" },
+      { "name": "Skills", "link": "#Skills", "iconSrc": "/assets/icons/skills.png" },
+      {
+        "name": "Projects",
+        "link": "#Projects",
+        "iconSrc": "/assets/icons/projects.png"
+      },
+      { "name": "Contact", "link": "#Contact", "iconSrc": "/assets/icons/contact.png" }
+  ]
+  ,
+    "skills": {
+      "languages": [
+        {
+          "name": "HTML",
+          "iconSrc": "/assets/skills/html.png"
+        },
+        {
+          "name": "CSS",
+          "iconSrc": "/assets/skills/css.png"
+        },
+        {
+          "name": "JavaScript",
+          "iconSrc": "/assets/skills/javascript.png"
+        },
+        {
+          "name": "TypeScript",
+          "iconSrc": "/assets/skills/typescript.png"
+        },
+        {
+          "name": "Python",
+          "iconSrc": "/assets/skills/python.png"
+        }
+      ],
+      "frameworks": [
+        {
+          "name": "React",
+          "iconSrc": "/assets/skills/react.png"
+        },
+        {
+          "name": "Django",
+          "iconSrc": "/assets/skills/django.png"
+        },
+        {
+          "name": "Material UI",
+          "iconSrc": "/assets/skills/materialui.png"
+        },
+        {
+          "name": "Cypress",
+          "iconSrc": "/assets/skills/cypress.png"
+        }
+      ],
+      "tools": [
+        {
+          "name": "Webpack",
+          "iconSrc": "/assets/skills/webpack.png"
+        },
+        {
+          "name": "Docker",
+          "iconSrc": "/assets/skills/docker.png"
+        },
+        {
+          "name": "Jira",
+          "iconSrc": "/assets/skills/jira.png"
+        },
+        {
+          "name": "Gitlab",
+          "iconSrc": "/assets/skills/gitlab.png"
+        },
+        {
+          "name": "Scss",
+          "iconSrc": "/assets/skills/scss.png"
+        },
+        {
+          "name": "Figma",
+          "iconSrc": "/assets/skills/figma.png"
+        }
+      ]
+    },
+     "timeline": [
+      {
+        "year": "2020 - Present",
+        "position": "Full-Stack Developer",
+        "company": "AAP-NDT ( Advanced Automation Protocol In NDT )",
+        "type": "Work"
+      },
+      {
+        "year": "2019 - 2020",
+        "position": "Full-Stack Developer",
+        "company": "DCI ( Digital Career Institute )",
+        "type": "Education"
+      },
+      {
+        "year": "2012 - 2016",
+        "position": "Bachelor's Degree In Education",
+        "company": "University 'St. Kliment Ohridski' Macedonia / Bitola",
+        "type": "Education"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Games Shop",
+        "iconSrc": "/assets/global/games-shop.png",
+        "publish": "To Be Published"
+      },
+      {
+        "name": "Judo Club Drim",
+        "iconSrc": "/assets/global/games-shop.png",
+        "publish": "To Be Published"
+
+      },
+      {
+        "name": "Mehatron",
+        "iconSrc": "/assets/global/games-shop.png",
+        "publish": "To Be Published"
+
+      },
+      {
+        "name": "Bar A Bar",
+        "iconSrc": "/assets/global/games-shop.png",
+        "publish": "To Be Published"
+
+      },
+      {
+        "name": "Derebanoski Familiy Calendar",
+        "iconSrc": "/assets/global/games-shop.png",
+       "publish": "Can Not Be Published"
+      },
+      {
+        "name": "DRIVE NDT Offline Client",
+        "iconSrc": "/assets/global/games-shop.png",
+        "publish": "Can Not Be Published"
+
+      }
+    ],
+    "subjectOptions" :[
+      { "value": "Work", "label": "Work Inquiry" },
+      { "value": "Project", "label": "Project Collaboration" },
+      { "value": "Freelance", "label": "Freelance Opportunity" },
+      { "value": "Feedback", "label": "Website Feedback" },
+      { "value": "Speaking", "label": "Speaking Engagement" },
+      { "value": "Networking", "label": "Networking" },
+      { "value": "Other", "label": "Other" }
+    ]
+}

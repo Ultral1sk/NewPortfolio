@@ -1,110 +1,123 @@
 import React from "react";
 
 import { Chip } from "@/src/components/Chip";
+import { Card } from "@/src/components/Card";
+
+import Image from "next/image";
 
 import skillsIcon from "@/public/assets/icons/skills.png";
-import Image from "next/image";
-import { Card } from "../components/Card";
-
-import htmlIcon from "@/public/assets/skills/html.png";
-import cssIcon from "@/public/assets/skills/css.png";
-import javaScriptIcon from "@/public/assets/skills/javascript.png";
-import pythonIcon from "@/public/assets/skills/python.png";
-import typeScriptIcon from "@/public/assets/skills/typescript.png";
-import reactIcon from "@/public/assets/skills/react.png";
-import materialUIIcon from "@/public/assets/skills/materialui.png";
-import djangoIcon from "@/public/assets/skills/django.png";
-import webpackIcon from "@/public/assets/skills/webpack.png";
-import dockerIcon from "@/public/assets/skills/docker.png";
-import jiraIcon from "@/public/assets/skills/jira.png";
-import gitIcon from "@/public/assets/skills/gitlab.png";
-import scssIcon from "@/public/assets/skills/scss.png";
-import figmaIcon from "@/public/assets/skills/figma.png";
 
 import "@/src/sections/Skills.scss";
 
-const languages = [
-  { name: "HTML", iconSrc: htmlIcon },
-  { name: "CSS", iconSrc: cssIcon },
-  { name: "JavaScript", iconSrc: javaScriptIcon },
-  { name: "TypeScript", iconSrc: typeScriptIcon },
-  { name: "Python", iconSrc: pythonIcon },
-];
-
-const frameworks = [
-  { name: "React", iconSrc: reactIcon },
-  { name: "Django", iconSrc: djangoIcon },
-  { name: "Material UI", iconSrc: materialUIIcon },
-  // { name: "Cypress", iconSrc: cypressIcon },
-];
-
-const tools = [
-  { name: "Webpack", iconSrc: webpackIcon },
-  { name: "Docker", iconSrc: dockerIcon },
-  { name: "Jira", iconSrc: jiraIcon },
-  { name: "Git", iconSrc: gitIcon },
-  { name: "Scss", iconSrc: scssIcon },
-  { name: "Figma", iconSrc: figmaIcon },
-];
+import data from "src/data.json";
 
 export const Skills = () => {
   return (
-    <div>
+    <div className="skills">
       <Chip title="Skills" icon={<Image src={skillsIcon} alt="Skills" />} />
       <h2 className="skills-info-title">
         Languages, <span>Frameworks</span> & Tools
       </h2>
       <section className="programming-languages">
-        {languages.map((language) => {
-          return (
-            <div className="skills-card">
-              <Card
-                key={language.name}
-                cardTitle={""}
-                subTitle={""}
-                imageTitle={language.name}
-                imageSrc={language.iconSrc}
-              >
-                <></>
-              </Card>
-            </div>
-          );
-        })}
+        <Skills.ProgrammingLanguages />
       </section>
       <section className="frameworks">
-        {frameworks.map((framework) => {
-          return (
-            <div className="skills-card">
-              <Card
-                key={framework.name}
-                cardTitle={""}
-                subTitle={""}
-                imageTitle={framework.name}
-                imageSrc={framework.iconSrc}
-              >
-                <></>
-              </Card>
-            </div>
-          );
-        })}
+        <Skills.Frameworks />
       </section>
       <section className="tools">
-        {tools.map((tool) => {
-          return (
-            <div className="skills-card">
-              <Card
-                key={tool.name}
-                cardTitle={""}
-                subTitle={""}
-                imageTitle={tool.name}
-                imageSrc={tool.iconSrc}
-              >
-                <></>
-              </Card>
-            </div>
-          );
-        })}
+        <Skills.Tools />
       </section>
     </div>
   );
 };
+
+const ProgrammingLanguages = () => {
+  return (
+    <>
+      {data.skills.languages.map((language) => {
+        return (
+          <div className="skills-card" key={language.name}>
+            <Card
+              cardTitle={""}
+              subTitle={""}
+              imageTitle={language.name}
+              image={
+                <Image
+                  width={200}
+                  className="card-profile-image"
+                  height={250}
+                  src={language.iconSrc}
+                  alt={language.name}
+                />
+              }
+            >
+              <></>
+            </Card>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+export const Frameworks = () => {
+  return (
+    <>
+      {data.skills.frameworks.map((framework) => {
+        return (
+          <div className="skills-card" key={framework.name}>
+            <Card
+              cardTitle={""}
+              subTitle={""}
+              imageTitle={framework.name}
+              image={
+                <Image
+                  width={200}
+                  className="card-profile-image"
+                  height={250}
+                  src={framework.iconSrc}
+                  alt={framework.name}
+                />
+              }
+            >
+              <></>
+            </Card>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+export const Tools = () => {
+  return (
+    <>
+      {data.skills.tools.map((tool) => {
+        return (
+          <div className="skills-card" key={tool.name}>
+            <Card
+              cardTitle={""}
+              subTitle={""}
+              imageTitle={tool.name}
+              image={
+                <Image
+                  width={200}
+                  className="card-profile-image"
+                  height={250}
+                  src={tool.iconSrc}
+                  alt={tool.name}
+                />
+              }
+            >
+              <></>
+            </Card>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+Skills.ProgrammingLanguages = ProgrammingLanguages;
+Skills.Frameworks = Frameworks;
+Skills.Tools = Tools;

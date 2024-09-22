@@ -6,9 +6,9 @@ import { Card } from "@/src/components/Card";
 
 import projectsIcon from "@/public/assets/icons/projects.png";
 
-import gamesShopSrc from "@/public/assets/global/games-shop.png";
-
 import "@/src/sections/Projects.scss";
+
+import data from "src/data.json";
 
 export const Projects = () => {
   return (
@@ -17,45 +17,34 @@ export const Projects = () => {
         title="Projects"
         icon={<Image src={projectsIcon} alt="Projects" />}
       />
-      <h2 className="projects-info-title">Projects</h2>
+      <h2 className="projects-info-title">
+        My
+        <strong> Work</strong>
+      </h2>
       <section className="project-cards">
-        <Card
-          cardTitle={""}
-          imageTitle={"Games Shop Project 1"}
-          subTitle={""}
-          imageSrc={gamesShopSrc}
-        >
-          <button>github</button>
-          <button>open</button>
-        </Card>
-        <Card
-          cardTitle={""}
-          imageTitle={"Games Shop Project 2"}
-          subTitle={""}
-          imageSrc={gamesShopSrc}
-        >
-          <button>github</button>
-          <button>open</button>
-        </Card>
-        <Card
-          cardTitle={""}
-          imageTitle={"Games Shop Project 3"}
-          subTitle={""}
-          imageSrc={gamesShopSrc}
-        >
-          <button>github</button>
-          <button>open</button>
-        </Card>
-
-        <Card
-          cardTitle={""}
-          imageTitle={"Games Shop Project 4"}
-          subTitle={""}
-          imageSrc={gamesShopSrc}
-        >
-          <button>github</button>
-          <button>open</button>
-        </Card>
+        {data.projects.map((project) => {
+          return (
+            <Card
+              key={project.name}
+              imageTitle={project.name}
+              cardTitle={""}
+              subTitle={""}
+              image={
+                <></>
+                // <Image
+                //   width={300}
+                //   height={200}
+                //   src={project.iconSrc}
+                //   alt={project.name}
+                // />
+              }
+            >
+              <h5>{project.publish}</h5>
+              {/* <button>github</button> */}
+              {/* <button>open</button> */}
+            </Card>
+          );
+        })}
       </section>
     </div>
   );
