@@ -43,6 +43,13 @@
     place-items: center;
     color: #999999;
 
+    .introduction-image {
+      max-width: auto;
+      @media (max-width: 768px) {
+        max-width: 280px;
+      }
+    }
+
     .zoom-in-out {
       animation: zoomInOut 10s ease-in-out infinite;
     }
